@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    padding:  30px ;
+    font-style: italic;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.section-one{
+    
+    background-color: blueviolet;
+    font-size: large;
+    /* padding:  20px 20px; */
+    /* margin-bottom: 30px;
+     */
+     padding-bottom: 30px;
+}
+.section-two{
+    
+    background-color: rgb(31, 182, 111);
+    font-size: large;
+    /* padding:  20px 20px; */
+    /* margin-top: 60px;
+     */
+     padding-top: 60px;
+}
+/* The top and bottom margins of blocks are sometimes combined (collapsed) into a single margin whose size is the largest of
+ the individual margins (or just one of them, if they are equal),
+ a behavior known as*** margin collapsing**. Note that the margins of floating and absolutely positioned elements never collapse. */
+ 
