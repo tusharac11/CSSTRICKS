@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trick 8 card hover effect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #221f3d;
+            display: grid;
+            place-items: center;
+        }
+
+        .card {
+            width: 35rem;
+            min-width: 20rem;
+            height: 40rem;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 50%;
+
+        }
+        .card_content{
+            text-align: center;
+            padding: 0 3rem;
+            position: absolute;
+        }
+        .card_content h1{
+             font-size: 3rem;
+             text-transform: capitalize;
+             color: #34495e;
+             /* margin-top: 2rem; */
+        }
+        .card_content p{
+            margin: 1rem 0 3rem 0;
+            font-size: 1.4rem;
+        }
+        a{
+            text-decoration: none;
+            border: .1rem solid #34495e;
+            padding: 10px 2.2rem;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            color: #34495e;
+            
+        }
+        a:hover{
+            background-color: #34495e;
+            color: #fff;
+        }
+        .card_number{
+            position: absolute;
+            background-color: #2e86c1;
+            color: #fff;
+            font-size: 8rem;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            transition: all 0.9s linear;
+        }
+        .card:hover .card_number{
+           /* background-color: #fff; */
+           width: 6rem;
+           height: 6rem;
+           border-radius: 50%;
+           border: .2rem dotted #34495e;
+           color: #34495e;
+           font-size: 2rem;
+           top: 10%;
+           left: 50%;
+           transform: translateX(-50%);
+           background-color: #fff;
+           box-shadow: 0px 7px 29px 0px #888888;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="card_data card_content">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime pariatur fuga eligendi? Cupiditate
+                placeat porro quidem molestiae adipisci! Mollitia reiciendis aperiam consectetur quidem qui vitae error
+                aliquam architecto ab. Saepe.</p>
+            <a href="#">Subscribe </a>
+        </div>
+        <div class="card_data card_number ">
+            <h2>11</h2>
+        </div>
+    </div>
+</body>
+
+</html>

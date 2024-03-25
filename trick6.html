@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trick -6 Notification bell</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color:black ;
+    }
+    .bell-notification{
+        color: #fff;
+        position: relative;
+        animation: bell 1s linear infinite alternate-reverse;
+        transform-origin: top;
+    }
+    @keyframes bell{
+0%{
+    transform: rotate(-10deg);
+}
+100%{
+    transform: rotate(10deg);
+}
+    }
+    .fa-bell{
+        font-size: 200px;
+    }
+    .bell-notification::after{
+        content: attr(current-count);
+        position: absolute;
+        top: 0;
+        right: -10%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        border: 10px solid black;
+    }
+
+
+    </style>
+</head>
+<body>
+   <div class=" bell-notification" current-count ="8">
+    <i class="fa-solid fa-bell"></i>
+   </div>
+
+  <!-- javascript -->
+    <script>
+        const updated_counter = document.querySelector(".bell-notification");
+        updated_counter.setAttribute("current-count",15);
+
+    </script>
+</body>
+</html>
